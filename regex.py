@@ -14,7 +14,7 @@ def regex(df_news_data):
     remove = r'\[[^)]*\]' or r'\([^)]*\)' or r'\<[^)]*\>' or r'\(^[0-9]*$)'
     for i in range(len(df_news_data)):
         df_news_data['제목'][i] = re.sub(remove, '', df_news_data['제목'][i])
-        return(df_news_data)
+    return(df_news_data)
 
     # 이후 to_csv 변환
     # df_news_data.to_csv("news_data.csv")
