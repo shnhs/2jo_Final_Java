@@ -33,11 +33,7 @@
                 </div>
             </div>
         </section>
-        
-<jsp:include page="charts/bar.jsp"/>
-<jsp:include page="charts/highcharts.jsp"/>
-        
-        
+<jsp:include page="charts/candle.jsp"/>
         <!-- Content section 2-->
         <section>
             <div class="container px-5">
