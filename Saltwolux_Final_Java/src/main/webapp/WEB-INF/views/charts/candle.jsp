@@ -217,7 +217,7 @@ am5xy.ValueAxis.new(root, {
 );
 
 var sbSeries = scrollbar.chart.series.push(am5xy.LineSeries.new(root, {
-valueYField: "Adj Close",
+valueYField: "Close",
 valueXField: "Date",
 xAxis: sbDateAxis,
 yAxis: sbValueAxis
@@ -245,7 +245,7 @@ var data = am5.CSVParser.parse(result.response, {
 var processor = am5.DataProcessor.new(root, {
  dateFields: ["Date"],
  dateFormat: "yyyy-MM-dd",
- numericFields: ["Open", "High", "Low", "Close", "Adj Close", "Volume"]
+ numericFields: ["Open", "High", "Low", "Close",  "Volume"]
 });
 processor.processMany(data);
 
