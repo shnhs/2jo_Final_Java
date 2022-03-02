@@ -133,6 +133,7 @@ var valueTooltip = valueSeries.set("tooltip", am5.Tooltip.new(root, {
   labelText: "{name}: {valueY} {valueYChangePreviousPercent.formatNumber('[#00ff00]+#,###.##|[#ff0000]#,###.##|[#999999]0')}%"
 }));
 valueTooltip.get("background") .set("fill", root.interfaceColors.get("background"));
+console.log(valueTooltip)
 
 
 var firstColor = chart.get("colors") .getIndex(0);
@@ -214,7 +215,7 @@ var sbValueAxis = scrollbar.chart.yAxes.push(
 );
 
 var sbSeries = scrollbar.chart.series.push(am5xy.LineSeries.new(root, {
-  valueYField: "Adj Close",
+  valueYField: "Close",
   valueXField: "Date",
   xAxis: sbDateAxis,
   yAxis: sbValueAxis
@@ -228,7 +229,7 @@ sbSeries.fills.template.setAll({
 
 // Load external data
 // https://www.amcharts.com/docs/v5/charts/xy-chart/series/#Setting_data
-am5.net.load("/csv/MSFT.csv").then(function(result) {
+am5.net.load("/csv/stock_db.csv").then(function(result) {
   
   // Parse loaded data
   var data = am5.CSVParser.parse(result.response, {
@@ -242,7 +243,7 @@ am5.net.load("/csv/MSFT.csv").then(function(result) {
   var processor = am5.DataProcessor.new(root, {
     dateFields: ["Date"],
     dateFormat: "yyyy-MM-dd",
-    numericFields: ["Open", "High", "Low", "Close", "Adj Close", "Volume"]
+    numericFields: ["Open", "High", "Low", "Close", "Volume"]
   });
   processor.processMany(data);
   
@@ -265,4 +266,3 @@ chart.appear(1000, 100);
 
 <!-- HTML -->
 <div id="chartdiv"></div>
-amCharts

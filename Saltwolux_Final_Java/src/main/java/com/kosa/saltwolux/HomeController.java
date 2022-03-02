@@ -32,7 +32,6 @@ public class HomeController {
 		String formattedDate = dateFormat.format(date);
 		
 		model.addAttribute("serverTime", formattedDate );
-//		 model.addAttribute("data", "[{country: 'USA', value: 2025}, {country: 'KOR', value: 1500}]");
 		
 		return "home";
 	}

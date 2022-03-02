@@ -1,4 +1,4 @@
-<%@ page contentType="text/html; charset=euc-kr" %>
+<%@ page contentType="text/html; charset=UTF-8"%>
 <jsp:include page="include/header.jsp"/>
 
 
@@ -33,7 +33,10 @@
                 </div>
             </div>
         </section>
-<jsp:include page="charts/candle.jsp"/>
+        
+<jsp:include page="charts/highcandle.jsp"/>
+
+
         <!-- Content section 2-->
         <section>
             <div class="container px-5">
