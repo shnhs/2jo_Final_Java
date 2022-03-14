@@ -44,13 +44,13 @@
                         <div class="col-lg-2 col-md-2 col-12 p-0" style="margin: 15px 20px 15px 0px; padding: 10px;">
                            <div class="search-input">
                               <label for="category"><i class="lni lni-calendar" ></i></label>
-                              <input type="text" name="startdate" id="startDate" value="20210429" placeholder="시작날짜">
+                              <input type="text" name="startdate" id="startDate" placeholder="시작날짜">
                            </div>
                         </div>
                         <div class="col-lg-2 col-md-2 col-12 p-0" style="margin: 15px 20px 15px 0px; padding: 10px;">
                            <div class="search-input">
                               <label for="category"><i class="lni lni-calendar"></i></label> 
-                              <input type="text"name="enddate" id="endDate" value="20210615" placeholder="종료날짜">
+                              <input type="text"name="enddate" id="endDate"  placeholder="종료날짜">
                            </div>
                         </div>
                         <div class="col-lg-3 col-md-3 col-12 p-0" style="margin: 15px 20px 15px 0px; padding: 10px;">
@@ -71,8 +71,8 @@
                            <label for="category"><i class="lni lni-popup"></i></label> 
                            <select name="holiday" id="category" style="color:#757575;">
                            <option value="none" selected disabled>휴일 뉴스</option>
-                           <option value="0">적용</option>
-                           <option value="1">미적용</option>
+                           <option value="0">사용</option>
+                           <option value="1">미사용</option>
                            </select>
                            </div>
                         </div>

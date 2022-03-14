@@ -30,5 +30,4 @@
 	<view-controller path="/search" view-name="search"/>
 	<view-controller path="/AboutUs" view-name="AboutUs"/>
 	
-	
 </beans:beans>
